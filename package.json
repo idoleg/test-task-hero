@@ -50,5 +50,6 @@
     "husky": "^3.1.0",
     "prettier": "1.19.1",
     "pretty-quick": "^2.0.1"
-  }
+  },
+  "homepage": "https://idoleg.github.io/test-task-hero/"
 }

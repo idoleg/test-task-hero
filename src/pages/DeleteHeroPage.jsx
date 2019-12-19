@@ -30,8 +30,12 @@ function DeleteHeroPage({
             Are you sure what you want to delete the hero{" "}
             <strong>{hero.name}</strong>?
           </span>{" "}
-          <button onClick={onCancelDeleteHero}>No</button>{" "}
-          <button onClick={onDeleteHero}>Yes!</button>{" "}
+          <button id="cancel" onClick={onCancelDeleteHero}>
+            No
+          </button>{" "}
+          <button id="delete" onClick={onDeleteHero}>
+            Yes!
+          </button>{" "}
           {isLoading && <span>Hero is deleting...</span>}
         </p>
       ) : (

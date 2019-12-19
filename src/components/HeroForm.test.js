@@ -2,7 +2,7 @@ import React from "react";
 import { mount } from "enzyme";
 import HeroForm from "./HeroForm";
 
-describe("<ListOfHeroes />", () => {
+describe("<HeroForm />", () => {
   const props = {
     onSubmit: jest.fn(),
     btnText: "Text on submit button",

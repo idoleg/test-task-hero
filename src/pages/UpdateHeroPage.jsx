@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import PropTypes from "prop-types";
 import HeroForm from "../components/HeroForm";
 import { Link } from "react-router-dom";
+import { heroPropTypes } from "../components/Hero";
 
 /**
  * Hero update page
@@ -27,7 +28,7 @@ export function UpdateHeroPage({ hero, onUpdateHero, isLoading, error }) {
           error={error}
         />
       ) : (
-        <p>Hero is loading</p>
+        <p>Hero is loading...</p>
       )}
       <Link to="/">Back to the list of heroes</Link>
     </>
@@ -35,6 +36,7 @@ export function UpdateHeroPage({ hero, onUpdateHero, isLoading, error }) {
 }
 
 UpdateHeroPage.propTypes = {
+  hero: PropTypes.shape(heroPropTypes),
   onUpdateHero: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired
