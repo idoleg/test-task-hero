@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
-import ListOfHeroes from "./ListOfHeroes";
-import Hero from "./Hero";
+import { ListOfHeroes } from "../ListOfHeroes";
+import Hero from "../Hero";
 
 describe("<ListOfHeroes />", () => {
   const heroes = [

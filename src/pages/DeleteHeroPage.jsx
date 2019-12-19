@@ -48,7 +48,7 @@ function DeleteHeroPage({
 }
 
 DeleteHeroPage.propTypes = {
-  hero: PropTypes.shape(heroPropTypes).isRequired,
+  hero: PropTypes.shape(heroPropTypes),
   onDeleteHero: PropTypes.func.isRequired,
   onCancelDeleteHero: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,

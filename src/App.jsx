@@ -6,8 +6,12 @@ import CreateHeroContainer from "./containers/CreateHeroContainer";
 import UpdateHeroContainer from "./containers/UpdateHeroContainer";
 import DeleteHeroContainer from "./containers/DeleteHeroContainer";
 import { configureStore } from "./store";
+import { fetchHeroes } from "./store/heroActions";
 
 const store = configureStore();
+
+// Init store
+store.dispatch(fetchHeroes());
 
 /**
  * Main component of the application

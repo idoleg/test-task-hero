@@ -1,48 +1,7 @@
-import React, { useEffect } from "react";
 import UpdateHeroPage from "../pages/UpdateHeroPage";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { fetchHeroes, updateHero } from "../store/heroActions";
-
-/**
- * @param {function} props.fetchHeroes
- * @param {function} props.updateHero
- * @param {Number} props.id
- * @param {Object} props.hero
- * @param {Boolean} props.isLoading
- * @param {Boolean|Object} props.error
- * @return {React.ReactElement}
- */
-function UpdateHeroContainer({
-  fetchHeroes,
-  updateHero,
-  id,
-  hero,
-  isLoading,
-  error
-}) {
-  // Fetch heroes, if they are not already loaded. This effect will work once.
-  useEffect(() => {
-    fetchHeroes();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  /**
-   * Update the hero to the store and redirect to the hero update page
-   * @param {object} hero
-   */
-  function handleUpdateHero(hero) {
-    updateHero({ ...hero, id });
-  }
-  return (
-    <UpdateHeroPage
-      hero={hero}
-      onUpdateHero={handleUpdateHero}
-      isLoading={isLoading}
-      error={error}
-    />
-  );
-}
+import { updateHero } from "../store/heroActions";
 
 const mapStateToProps = (state, props) => {
   const id = parseInt(props.match.params.id);
@@ -54,10 +13,28 @@ const mapStateToProps = (state, props) => {
     error: state.heroes.error
   };
 };
+
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ fetchHeroes, updateHero }, dispatch);
+  bindActionCreators({ updateHero }, dispatch);
+
+const mergeProps = (stateProps, dispatchProps) => {
+  /**
+   * Update the hero to the store and redirect to the hero update page
+   * @param {object} hero
+   */
+  function handleUpdateHero(hero) {
+    dispatchProps.updateHero({ ...hero, id: stateProps.id });
+  }
+
+  return {
+    ...stateProps,
+    ...dispatchProps,
+    onUpdateHero: handleUpdateHero
+  };
+};
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
-)(UpdateHeroContainer);
+  mapDispatchToProps,
+  mergeProps
+)(UpdateHeroPage);

@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import DeleteHeroPage from "./DeleteHeroPage";
+import DeleteHeroPage from "../DeleteHeroPage";
 
 describe("<DeleteHeroPage />", () => {
   const props = {
@@ -29,6 +29,7 @@ describe("<DeleteHeroPage />", () => {
     expect(props.onDeleteHero).toHaveBeenCalledTimes(1);
   });
 
+  // eslint-disable-next-line max-len
   it("dispatches the `onCancelDeleteHero()` props when clicked on No button", () => {
     expect(props.onCancelDeleteHero).toHaveBeenCalledTimes(0);
     wrapper.find("button#cancel").simulate("click", new Event("click"));

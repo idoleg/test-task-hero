@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
  * @param {Number} props.id
  * @return {React.ReactElement}
  */
-function Hero({ name, description, id }) {
+export function Hero({ name, description, id }) {
   return (
     <li>
       <dl>

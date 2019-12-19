@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import HeroForm from "./HeroForm";
+import { HeroForm } from "../HeroForm";
 
 describe("<HeroForm />", () => {
   const props = {

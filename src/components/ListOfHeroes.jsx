@@ -7,11 +7,11 @@ import PropTypes from "prop-types";
  * @param {object} props.hero
  * @return {React.ReactElement}
  */
-function ListOfHeroes({ heroes }) {
+export function ListOfHeroes({ heroes }) {
   return (
     <ol>
       {heroes.map(hero => (
-        <Hero {...hero} key={hero.id} />
+        <Hero key={hero.id} {...hero} />
       ))}
     </ol>
   );

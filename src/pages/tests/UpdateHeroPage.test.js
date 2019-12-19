@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
-import UpdateHeroPage from "./UpdateHeroPage";
-import HeroForm from "../components/HeroForm";
+import UpdateHeroPage from "../UpdateHeroPage";
+import HeroForm from "../../components/HeroForm";
 
 describe("<UpdateHeroPage />", () => {
   const props = {

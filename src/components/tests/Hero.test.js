@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { shallow } from "enzyme";
-import Hero from "./Hero";
+import { Hero } from "../Hero";
 
 describe("<Hero />", () => {
   const props = {

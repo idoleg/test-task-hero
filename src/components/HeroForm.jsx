@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
  * @param {Boolean|Object} props.error
  * @return {React.ReactElement}
  */
-function HeroForm({
+export function HeroForm({
   onSubmit,
   btnText,
   inputName,
@@ -86,9 +86,9 @@ HeroForm.defaultProps = {
 
 HeroForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  btnText: PropTypes.string.isRequired,
-  inputName: PropTypes.string.isRequired,
-  inputDescription: PropTypes.string.isRequired,
+  btnText: PropTypes.string,
+  inputName: PropTypes.string,
+  inputDescription: PropTypes.string,
   isLoading: PropTypes.bool.isRequired,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired
 };
