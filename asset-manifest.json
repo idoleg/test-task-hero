@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/test-task-hero/static/js/main.b134ec8f.chunk.js",
+    "main.js.map": "/test-task-hero/static/js/main.b134ec8f.chunk.js.map",
+    "runtime-main.js": "/test-task-hero/static/js/runtime-main.f65b2fc8.js",
+    "runtime-main.js.map": "/test-task-hero/static/js/runtime-main.f65b2fc8.js.map",
+    "static/js/2.dee23df6.chunk.js": "/test-task-hero/static/js/2.dee23df6.chunk.js",
+    "static/js/2.dee23df6.chunk.js.map": "/test-task-hero/static/js/2.dee23df6.chunk.js.map",
+    "index.html": "/test-task-hero/index.html",
+    "precache-manifest.7400dd4b965e8600b39b4f107cb77df4.js": "/test-task-hero/precache-manifest.7400dd4b965e8600b39b4f107cb77df4.js",
+    "service-worker.js": "/test-task-hero/service-worker.js",
+    "static/js/2.dee23df6.chunk.js.LICENSE": "/test-task-hero/static/js/2.dee23df6.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f65b2fc8.js",
+    "static/js/2.dee23df6.chunk.js",
+    "static/js/main.b134ec8f.chunk.js"
+  ]
+}
