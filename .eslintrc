@@ -1,0 +1,12 @@
+{
+  "extends": ["react-app", "google", "prettier/react"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "object-curly-spacing": ["error", "always", { "arraysInObjects": false }],
+    "quotes": ["error", "double"],
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": ["error", "never"],
+    "indent": ["error", 2]
+  }
+}
